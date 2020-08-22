@@ -8,6 +8,8 @@ RUN conda update --quiet --yes -n base conda
 
 RUN conda update --quiet --yes --all
 RUN conda clean --all -f -y
+RUN conda create -n tf tensorflow --quiet --yes
+RUN conda activate tf
 
 RUN conda install --quiet --yes -c conda-forge jupyter_contrib_nbextensions
 
